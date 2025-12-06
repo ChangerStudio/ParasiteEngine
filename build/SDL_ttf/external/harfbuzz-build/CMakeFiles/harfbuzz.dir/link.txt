@@ -1,2 +1,0 @@
-D:\ProgramFiles\MSYS2\mingw64\bin\ar.exe qc libharfbuzz.a CMakeFiles/harfbuzz.dir/src/harfbuzz.cc.obj
-D:\ProgramFiles\MSYS2\mingw64\bin\ranlib.exe libharfbuzz.a

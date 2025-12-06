@@ -1,2 +1,0 @@
-D:\ProgramFiles\MSYS2\mingw64\bin\ar.exe qc libplutosvg.a CMakeFiles/plutosvg.dir/source/plutosvg.c.obj
-D:\ProgramFiles\MSYS2\mingw64\bin\ranlib.exe libplutosvg.a

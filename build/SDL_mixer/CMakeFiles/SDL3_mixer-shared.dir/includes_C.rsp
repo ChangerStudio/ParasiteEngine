@@ -1,1 +1,0 @@
--IF:/ParasiteEngine/SDL_mixer/include -IF:/ParasiteEngine/SDL_mixer/src -IF:/ParasiteEngine/SDL_mixer/src/codecs -I"F:/ParasiteEngine/build/SDL/include-revision" -IF:/ParasiteEngine/SDL/include
