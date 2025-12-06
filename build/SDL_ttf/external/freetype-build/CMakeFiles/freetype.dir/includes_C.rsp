@@ -1,0 +1,1 @@
+-I"F:/ParasiteEngine/build/SDL_ttf/external/freetype-build/include" -IF:/ParasiteEngine/SDL_ttf/external/freetype/include -I"F:/ParasiteEngine/build/SDL_ttf/external/freetype-build/include/freetype/config" -IF:/ParasiteEngine/SDL_ttf/external/harfbuzz/src

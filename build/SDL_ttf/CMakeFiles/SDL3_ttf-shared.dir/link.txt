@@ -1,0 +1,3 @@
+D:\ProgramFiles\CMake\bin\cmake.exe -E rm -f CMakeFiles\SDL3_ttf-shared.dir/objects.a
+D:\ProgramFiles\MSYS2\mingw64\bin\ar.exe qc CMakeFiles\SDL3_ttf-shared.dir/objects.a @CMakeFiles\SDL3_ttf-shared.dir\objects1.rsp
+d:\ProgramFiles\MSYS2\mingw64\bin\g++.exe -g -shared -static-libgcc -Wl,--no-undefined -Wl,--version-script=F:/ParasiteEngine/SDL_ttf/src/SDL_ttf.sym -o ..\Debug\SDL3_ttf.dll -Wl,--out-implib,libSDL3_ttf.dll.a -Wl,--major-image-version,0,--minor-image-version,3 -Wl,--whole-archive CMakeFiles\SDL3_ttf-shared.dir/objects.a -Wl,--no-whole-archive @CMakeFiles\SDL3_ttf-shared.dir\linkLibs.rsp

@@ -1,0 +1,1 @@
+cmake -DSDLTTF_VENDORED=ON -S . -B build

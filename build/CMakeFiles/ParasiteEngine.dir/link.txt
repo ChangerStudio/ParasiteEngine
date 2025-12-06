@@ -1,0 +1,3 @@
+D:\ProgramFiles\CMake\bin\cmake.exe -E rm -f CMakeFiles\ParasiteEngine.dir/objects.a
+D:\ProgramFiles\MSYS2\mingw64\bin\ar.exe qc CMakeFiles\ParasiteEngine.dir/objects.a @CMakeFiles\ParasiteEngine.dir\objects1.rsp
+d:\ProgramFiles\MSYS2\mingw64\bin\g++.exe -g -mwindows -Wl,--whole-archive CMakeFiles\ParasiteEngine.dir/objects.a -Wl,--no-whole-archive -o Debug\ParasiteEngine.exe -Wl,--out-implib,libParasiteEngine.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\ParasiteEngine.dir\linkLibs.rsp
