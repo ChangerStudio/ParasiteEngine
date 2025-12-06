@@ -2,3 +2,6 @@
 /SDL_image/*
 /SDL_ttf/*
 /SDL_mixer/*
+/build
+/docs
+/build.txt
