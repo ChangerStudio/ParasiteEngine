@@ -1,40 +1,44 @@
-#include <SDL3/SDL.h>
-#include <SDL3_image/SDL_image.h>
-#include <SDL3_ttf/SDL_ttf.h>
-#include <SDL3_mixer/SDL_mixer.h>
-#include <SDL3/SDL_main.h>
-#include <iostream>
+#include <lib.hpp>
+
+namespace PS
+{
+    char *PATH(char *path)
+    {
+        // 为多平台做准备
+        return path;
+    }
+
+    void Window::CreateWindow(const char *title, int width, int height, SDL_WindowFlags window_flags)
+    {
+        SDL_CreateWindowAndRenderer(title, width, height, window_flags, &window, &renderer);
+    }
+
+    void Window::DestroyWindow()
+    {
+        SDL_DestroyWindow(window);
+        SDL_DestroyRenderer(renderer);
+    }
+
+    void Window::FillColor(int r, int g, int b, int a)
+    {
+        SDL_SetRenderDrawColor(renderer, r, g, b, a);
+    }
+
+}
 
 int main(int argc, char *argv[])
 {
-    SDL_Window *window;
-    SDL_Renderer *renderer;
+    PS::Window window;
     SDL_Event event;
-    SDL_Init(SDL_INIT_AUDIO | SDL_INIT_EVENTS | SDL_INIT_VIDEO);
-    SDL_CreateWindowAndRenderer("Parasite Engine", 1200, 800, SDL_WINDOW_RESIZABLE, &window, &renderer);
-    std::cout << "Built window&renderer success." << std::endl;
-    bool loop = true;
-    while (loop)
-    {
-        while (SDL_PollEvent(&event))
-        {
-            if (event.type == SDL_EVENT_QUIT)
-            {
-                std::cout << "Event: QUIT" << std::endl;
-                loop = false;
+    window.CreateWindow("1",1200,800,SDL_WINDOW_RESIZABLE);
+    bool keep=true;
+    while(keep){
+        while(SDL_PollEvent(&event)){
+            if(event.type==SDL_EVENT_QUIT){
+                keep=false;
             }
         }
-
-        if (!SDL_SetRenderDrawColor(renderer, 255, 255, 255, SDL_ALPHA_OPAQUE))
-        {
-            std::cout << SDL_GetError() << std::endl;
-        }
-        
-        SDL_RenderClear(renderer);
-        SDL_RenderPresent(renderer);
+        window.FillColor(200,200,200,255);
     }
-    SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(window);
-    SDL_Quit();
     return 0;
 }
