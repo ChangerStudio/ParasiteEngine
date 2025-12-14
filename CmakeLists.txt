@@ -12,7 +12,6 @@ add_subdirectory(SDL_mixer EXCLUDE_FROM_ALL)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/src SRC)
-aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/src/editor/video SRC_EDITOR_VIDEO)
-add_executable(${PROJECT_NAME} ${SRC} ${SRC_EDITOR_VIDEO})
+add_executable(${PROJECT_NAME} ${SRC})
 
 target_link_libraries(ParasiteEngine PRIVATE SDL3_mixer::SDL3_mixer SDL3_ttf::SDL3_ttf SDL3_image::SDL3_image SDL3::SDL3)
