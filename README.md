@@ -1,5 +1,5 @@
 ### 当前版本: v0.0.251227a
-### 该项目使用混合许可证,子项目信息如下:
+### 该项目使用混合许可证, 子项目信息如下:
  - 寄生引擎脚本语言(Parasite Script Language): MIT LICENSE. 编译器位置:(Parasite Script Compiler)[TODO].
  - 寄生引擎代码编辑器(Parasite Coding Space):  MIT LICENSE. **本仓库是Parasite Coding Space的仓库**.
 

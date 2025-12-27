@@ -4,3 +4,5 @@
 /SDL_ttf/
 /SDL_mixer/
 /debug.bat
+/.vscode/
+/.CmakeLists.txt.swp
