@@ -1,19 +1,23 @@
-# ParasiteEngine
-致力于性能优化与实用性的游戏引擎:Parasite Engine寄生引擎
+### 当前版本: v0.0.251227a
+### 该项目使用混合许可证,子项目信息如下:
+ - 寄生引擎脚本语言(Parasite Script Language): MIT LICENSE. 编译器位置:(Parasite Script Compiler)[TODO].
+ - 寄生引擎代码编辑器(Parasite Coding Space):  MIT LICENSE. **本仓库是Parasite Coding Space的仓库**.
 
-## 注意
-该项目使用混合许可证.
-Parasite-Python Language Standard : MIT License.
-Parasite Engine toolchains (For WIN32 platform) : AGPL 3.0.
+### 本项目所使用的外部库:
+ - [SDL3](https://github.com/libsdl-org/SDL):             Zlib LICENSE.
+ - [SDL3_image](https://github.com/libsdl-org/SDL_image): Zlib LICENSE.
+ - [SDL3_ttf](https://github.com/libsdl-org/SDL_ttf):     Zlib LICENSE.
+ - [SDL3_mixer](https://github.com/libsdl-org/SDL_mixer): Zlib LICENSE.
+ - [Vulkan SDK](https://github.com/SaschaWillems/Vulkan): MIT LICENSE.
 
-# 特性
+本分支暂无Resource.
+
+# 欢迎来到ParasiteEngine
+致力于性能优化与实用性的游戏引擎: Parasite Engine寄生引擎
+
 用C++编写,以SDL3为基石,使用Vulkan API提升3D性能(注:Vulkan API部分暂未实现),目前支持Windows(WIN32)平台.
 
-作为一个游戏引擎,必不可少的是一个
- - 解释/编译核心: 寄生引擎的专有解释/编译器使用代码生成模式,将用户的脚本代码转译成C++代码,并使用各平台编译器将其作为纯C/C++语言项目配置,编译,并发行.
- - 脚本语言: 为了使引擎同时具有快速与清晰,并拥有极高的可拓展能力和较低的上手难度,本引擎采用类Python语言作为脚本工具,我将其称之为Parasite-Python(简称P-Py)
- - IDE: 尽管这对于一个真的能用来开发游戏的引擎来说是必须的,但目前(截止至本次提交代码)并没有实现IDE的打算
+作为一个游戏引擎,Parasite Engine使用自有编辑器和脚本语言进行开发.
+在使用它开发项目时,你需要通过初始化场景和编写节点树来绑定基本元素.但Parasite Engine与Godot不同,它的脚本拥有独立的工作流程,不依赖引擎的回调,这一点与python开发相似.*(你甚至可以将所有源代码塞在同一个.psscript文件里,不过不太推荐)*
 
-大概就这样了,我要睡觉了 [doge]
-
-版本: v0.0.251214a
+更多内容待定...

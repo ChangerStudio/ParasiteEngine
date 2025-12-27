@@ -5,15 +5,42 @@ namespace IDE
     const char *Window_TITLE = "Parasite IDE";
     int Window_WIDTH = 1200;
     int Window_HEIGHT = 800;
-}
 
+    class BaseWindow
+    {
+    private:
+    public:
+        SDL_Window *window;
+        SDL_Renderer *renderer;
+
+        BaseWindow(const char *title, int width, int height, SDL_WindowFlags window_flags)
+        {
+            SDL_CreateWindowAndRenderer(title, width, height, window_flags, &window, &renderer);
+        }
+
+        ~BaseWindow()
+        {
+            SDL_DestroyWindow(window);
+            SDL_DestroyRenderer(renderer);
+        }
+
+        void fill_color(Uint8 r, Uint8 g, Uint8 b)
+        {
+            SDL_SetRenderDrawColor(renderer, r, g, b, 255);
+        }
+
+        void display()
+        {
+            SDL_RenderClear(renderer);
+            SDL_RenderPresent(renderer);
+        }
+    };
+}
 
 int main(int argc, char *argv[])
 {
-    SDL_Window *window = nullptr;
-    SDL_Renderer *renderer = nullptr;
     SDL_Init(SDL_INIT_EVENTS | SDL_INIT_VIDEO);
-    SDL_CreateWindowAndRenderer(IDE::Window_TITLE, IDE::Window_WIDTH,IDE::Window_HEIGHT, SDL_WINDOW_RESIZABLE, &window, &renderer);
+    IDE::BaseWindow window = IDE::BaseWindow(IDE::Window_TITLE, IDE::Window_WIDTH, IDE::Window_HEIGHT, SDL_WINDOW_RESIZABLE);
     bool loop = true;
     while (loop)
     {
@@ -25,12 +52,8 @@ int main(int argc, char *argv[])
                 loop = false;
             }
         }
-        SDL_SetRenderDrawColor(renderer, 13, 17, 23, 255);
-        SDL_RenderClear(renderer);
-        SDL_RenderPresent(renderer);
+        window.fill_color(20,20,100);
+        window.display();
     }
-    SDL_DestroyWindow(window);
-    SDL_DestroyRenderer(renderer);
-    SDL_Quit();
     return 0;
 }
