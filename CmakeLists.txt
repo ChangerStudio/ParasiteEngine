@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.20)
+
+#Parasite Coding Space
+project(
+    ParasiteCodingSpace 
+    LANGUAGES CXX 
+    DESCRIPTION "Parasite Engine Tools : Parasite Coding Space"
+)
+
+add_subdirectory(SDL EXCLUDE_FROM_ALL)
+add_subdirectory(SDL_ttf EXCLUDE_FROM_ALL)
+add_subdirectory(SDL_image EXCLUDE_FROM_ALL)
+add_subdirectory(SDL_mixer EXCLUDE_FROM_ALL)
+
+add_executable(ParasiteCodingSpace src/main.cpp)
+target_include_directories(ParasiteCodingSpace PRIVATE include)
+target_link_libraries(ParasiteCodingSpace PRIVATE SDL3::SDL3 SDL3_image::SDL3_image SDL3_ttf::SDL3_ttf SDL3_mixer::SDL3_mixer)
