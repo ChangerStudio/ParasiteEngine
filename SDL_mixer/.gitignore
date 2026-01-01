@@ -44,3 +44,4 @@ Xcode/
 *.editorconfig
 *.clang-format
 *.clang-tidy
+external
